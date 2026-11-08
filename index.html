@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smash Burger Reservation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">SB</div>
+    <div>
+        <h1>Smash Burger</h1>
+        <p>Reservations & Dining</p>
+    </div>
+</header>
+
+<section class="hero">
+    <div>
+        <p class="tagline">GOOD FOOD. GOOD TIMES.</p>
+        <h2>Reserve Your Table</h2>
+        <p>Book your dining experience with us.</p>
+    </div>
+
+    <div class="hours">
+        <h3>Operating Hours</h3>
+        <p>Monday, Wednesday</p>
+        <p>Friday & Saturday</p>
+        <strong>10:00 AM – 7:00 PM</strong>
+    </div>
+</section>
+
+<main class="container">
+
+    <section class="panel">
+        <h2>Make a Reservation</h2>
+        <p class="subtitle">Fill in the details below to reserve your table.</p>
+
+        <form id="reservationForm">
+
+            <label for="customerName">Full Name</label>
+            <input type="text" id="customerName" placeholder="Enter your name" required>
+
+            <label for="contact">Contact Number</label>
+            <input type="text" id="contact" placeholder="Enter contact number" required>
+
+            <label for="bookingDate">Reservation Date</label>
+            <input type="date" id="bookingDate" required>
+
+            <label for="bookingTime">Available Time Slot</label>
+            <select id="bookingTime" required>
+                <option value="">Select a date first</option>
+            </select>
+
+            <p id="availability" class="availability">
+                Select a date to check available slots.
+            </p>
+
+            <label for="guestCount">Number of Guests</label>
+            <input type="number" id="guestCount" min="1" max="4" value="1" required>
+
+            <button type="submit" id="reserveButton">Reserve Now</button>
+
+            <p id="message"></p>
+        </form>
+    </section>
+
+    <section class="panel">
+        <h2>Reservation Records</h2>
+        <p class="subtitle">View and manage your reservations.</p>
+
+        <input type="text" id="searchInput" placeholder="Search by customer name...">
+
+        <select id="statusFilter">
+            <option value="all">All Reservations</option>
+            <option value="active">Active Reservations</option>
+        </select>
+
+        <button type="button" id="clearSearch" class="clear">Clear Search</button>
+
+        <p class="record-count">Total Reservations: <span id="count">0</span></p>
+
+        <div id="reservationList"></div>
+    </section>
+
+</main>
+
+<section class="schedule">
+    <h2>Daily Schedule</h2>
+    <p>Each time slot lasts 2 hours and accepts up to 2 groups.</p>
+
+    
+<div class="schedule-grid">
+    <div>10 AM – 12 PM</div>
+    <div>12 PM – 2 PM</div>
+    <div>2 PM – 4 PM</div>
+    <div>4 PM – 6 PM</div>
+    <div>6 PM – 7 PM</div>
+</div>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
